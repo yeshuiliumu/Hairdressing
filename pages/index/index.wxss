@@ -92,7 +92,7 @@ swiper-item image {
    height: 339rpx;
 }
 .goods-box .goods-title{
-  width: 280rpx;
+  width: 70%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -101,6 +101,17 @@ swiper-item image {
   color:#000;
   margin-left: 24rpx;
 }
+.goods-box .goods-distance{
+  width: 30%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 24rpx;
+  padding: 24rpx 0 0rpx 0;
+  color:#aaa;
+  margin-left: 24rpx;
+}
+
 .goods-box .goods-price{
   width: 280rpx;
   overflow: hidden;

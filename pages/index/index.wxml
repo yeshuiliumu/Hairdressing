@@ -60,10 +60,16 @@
            <view class="img-box">
               <image src="{{item.pic}}_m" class="image" mode="aspectFill" lazy-load="true"/>
            </view>
-           <view class="goods-title">{{item.name}}</view>
+           
+
+            <view style='display:flex;'>
+              <view class="goods-title">{{item.name}}</view>
+              <view class="goods-distance">0.1km</view>
+            </view>
+
            <view style='display:flex;'>
-            <view class="goods-price">¥ {{item.minPrice}}</view>
-            <view wx:if="{{item.originalPrice && item.originalPrice > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ {{item.originalPrice}}</view>
+            <view class="goods-price"> {{item.minPrice}}推荐票</view>
+            <view wx:if="{{item.originalPrice && item.originalPrice > 0}}" class="goods-price" style='color:#aaa;'>{{item.originalPrice}}次消费</view>
            </view>           
         </view>
     </view>
