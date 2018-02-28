@@ -31,17 +31,48 @@
       {{selectSize}}
    </view>
     <view class="goods-des-info" >
-        <view  style='display:flex;'>
-          <view class="label-title">店铺</view>
-          <view class="label-title">洗头师</view>
-          <view class="label-title">美发师</view>
-          <view class="label-title">套餐</view>
-          <view class="label-title">大家评价</view>
-        </view>
+       
+          <view  style='display:flex;'>
+          <view class="label-title"  data-id="0"  bindtap="switchTab">店铺</view>
+          <view class="label-title" data-id="2"  bindtap="switchTab">洗头师</view>
+          <view class="label-title" data-id="3"  bindtap="switchTab">美发师</view>
+          <view class="label-title" data-id="4"  bindtap="switchTab">套餐</view>
+          <view class="label-title" data-id="5"  bindtap="switchTab">大家评价</view>
+          <view class="label-title" data-id="6"  bindtap="switchTab">优惠</view>
+          </view>
+          <view  style='display:flex;'>
+          <view class="label-title"  data-id="7"  bindtap="switchTab">推荐发型</view>
+          <view class="label-title" data-id="8"  bindtap="switchTab">推荐商品</view>
+         
+          </view>
+       
         
-        <view class="goods-text">
+        <view class="goods-text" hidden="{{currentNavtab==0 ? '' : true}}">
             <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
          </view>
+
+        
+        <view class = "page2" hidden="{{currentNavtab==2 ? '' : true}}">
+              <text>页面2</text>
+        </view>
+        <view class = "page3" hidden="{{currentNavtab==3 ? '' : true}}">
+              <text>页面3</text>
+        </view>
+        <view class = "page4" hidden="{{currentNavtab==4 ? '' : true}}">
+              <text>页面4</text>
+        </view>
+        <view class = "page5" hidden="{{currentNavtab==5 ? '' : true}}">
+              <text>页面5</text>
+        </view>
+        <view class = "page6" hidden="{{currentNavtab==6 ? '' : true}}">
+              <text>页面6</text>
+        </view>
+        <view class = "page7" hidden="{{currentNavtab==7 ? '' : true}}">
+              <text>页面7</text>
+        </view>
+        <view class = "page8" hidden="{{currentNavtab==8 ? '' : true}}">
+              <text>页面8</text>
+        </view>
     </view>
     <view class="goods-des-info" style="margin-top:35rpx;" wx:if="{{reputation}}">
         <view class="label-title" style="border-bottom:1px solid #eee;">大家评价<text style="color:red">（{{reputation.length}}）</text></view>

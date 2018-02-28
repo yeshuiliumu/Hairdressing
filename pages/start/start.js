@@ -1,6 +1,6 @@
 //login.js
 //获取应用实例
-var app = getApp();
+
 Page({
   data: {
     remind: '加载中',
@@ -16,11 +16,6 @@ Page({
     var that = this
     wx.setNavigationBarTitle({
       title: wx.getStorageSync('mallName')
-    })
-    app.getUserInfo(function(userInfo){
-      that.setData({
-        userInfo: userInfo
-      })
     })
   },
   onShow:function(){

@@ -24,6 +24,7 @@ Page({
     canSubmit:false, //  选中规格尺寸时候是否允许加入购物车
     shopCarInfo:{},
     shopType: "addShopCar",//购物类型，加入购物车或立即购买，默认为加入购物车
+    currentNavtab: "0",
   },
 
   //事件处理函数
@@ -82,6 +83,11 @@ Page({
       }
     })
     this.reputation(e.id);
+  },
+  switchTab: function (e) {
+    this.setData({
+      currentNavtab: e.currentTarget.dataset.id
+    });
   },
   goShopCar: function () {
     wx.reLaunch({
